@@ -1,0 +1,22 @@
+body {
+	font-family: Arial;
+}
+
+button {
+	font-size: 20px;
+	background-color: CornflowerBlue;
+	border: 1px solid RoyalBlue;
+	border-radius: 5px;
+	width: 50%;
+	height: 50px;
+}
+
+.conteudo {
+	font-size: 50px;
+	width: 30%;
+	text-align: center;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}

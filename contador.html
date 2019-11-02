@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<head>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<script>
+		var count = 0;
+		var play = false;
+		i = prompt('quantos segundos você deseja jogar?');
+		if ( i <= 0 ) i = 30;
+
+		function addCount() {
+			if(play == true) count++;
+		};
+	
+		function tickTime() {
+			i > 0 ? i-- : play = false;
+	
+			document.getElementById("time").innerHTML = i;
+		};
+
+		function tickClicks() {
+			document.getElementById("clicks").innerHTML = count;
+		};
+		
+		function initGame(btn) {
+			play = true;
+			setInterval(tickTime, 1000);
+			setInterval(tickClicks, 10);
+			btn.setAttribute("onclick", "addCount()");
+		};
+	</script>
+</head>
+<body>
+	<div class="conteudo">
+		<span>Cliques: </span><span id="clicks"></span><br>
+		<span>Tempo: </span><span id="time"></span><br>
+		<button onclick="initGame(this)" id="clicksBtn">Clique</button>
+	</div>
+</body>
+</html>
